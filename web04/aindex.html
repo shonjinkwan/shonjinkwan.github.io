@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 국방부</title>
+    <!--메타포-->
+    <meta name="title" content="국방부 홈페이지">
+    <meta name="keywords" content="국방부">
+    <meta name="description" content="국방부 홈페이지">
+    <!--파비콘-->
+    <link type="image/x-icon" rel="shortcut icon" href="/source/favicon.ico">
+    <!--오픈그래프-->
+    <meta property="og:title" content="국방부 홈페이지">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mnd.go.kr">
+    <meta property="og:description" content="국방부">
+     <meta property="og:image" content="./source/site_thumb.jpg" />
+    <!--필요한 라이브러리-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--폰트-->
+    <link href="https://fonts.google.com/specimen/Black+Han+Sans?subset=korean#standard-styles" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css">
+    <!--외부스타일-->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="reset.css">
+    <!-- 구글 애널리스트 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G5EVJRK6G5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G5EVJRK6G5');
+</script>
+<style>
+ .hd_wrap { width:2000px; margin:20px auto; position:relative;}
+ .logo { float: left ;   margin-top:70px; margin-left: 200px;}
+ .search { position:relative;}
+ .lang { float: right; margin-top:100px; margin-right:25%;}
+ .gnb { width: 100%; }
+ footer{position:relative}
+   footer .ft_logo { margin-left:40px;}
+   footer .footerSecInner{max-width:1200px;margin: 0 auto;box-sizing:border-box;position:relative; overflow:hidden;}
+   footer .footerLinkWrap{border-bottom:1px solid #4d545e;padding:20px 0}
+   footer .footer_nav{}
+   footer .footer_nav ul{font-size:0 ; }
+   footer .footer_nav ul li{display:inline-block; vertical-align:middle; font-size:14px; position:relative; }
+   footer .footer_nav ul li a{display:inline-block; padding:0 15px 0 0;color:#222; font-size:15px; font-weight:bold; text-decoration-line: none;}
+   footer .footer_nav ul li a:after{content:"";display:block;width:1px;height:13px;background:#222; position:absolute; top:2px; right:7px;}
+   footer .footer_nav ul li:first-child a{color:#2c57b5}
+   footer .footer_nav ul li:last-child a:after{display:none;}
+   
+   footer address{margin-top:20px; margin-left: 38px; color:rgb(0, 0, 0); font-size: 12px;}
+   footer p{color:rgb(0, 0, 0); margin-left: 38px; font-size: 12px;}
+   
+   footer .logos{position:absolute; top:25px; right:0;}
+   footer .logos ul li{float:left; list-style: none;}
+   footer .logos ul li img,
+   footer .logos ul li span{display:block; float:left;}
+   footer .logos ul li span{padding-top:15px; margin: 0 10px 0 5px; font-weight:bold;}
+   .owl-nav div {position:absolute; top:45vh; z-index: 10; width: 20px; height: 40px; background-color: #fff;
+        text-indent: -10000px;}
+        .owl-next{ right: 80px;}
+        .owl-prev{ left: 80px;}
+        .owl-dots { position:absolute; bottom: 80px; width: 160px; height: 30px; left: 50%; margin-left: -80px;}
+        .owl-dots div {display: block; width: 20px; height: 20px; float: left;
+        background-color: #fff; border-radius: 12px; margin: 10px;}
+        .owl-dots div.active{background: skyblue;}
+        #vs .img_box .vs_com { font-size:18px; text-shadow:-1px -1px 2px #333; }
+   .img_box{ clear:both; width: 100%; overflow-x: hidden; position:relative; }
+
+         .owl-nav div {position:absolute; top:45vh; z-index: 10; width: 20px; height: 40px; background-color: #fff;
+        text-indent: -10000px;} 
+        .owl-next{ display: none;}
+        .owl-prev{ display: none;}
+        .owl-dots { position:absolute; bottom: 80px; width: 160px; height: 30px; left: 50%; margin-left: -80px;}
+        .owl-dots div {display:block; width: 50px; height: 20px; float: left;
+        background-color: rgb(14, 11, 11); border-radius: 12px; margin: 10px;}
+        .owl-dots div.active{background: rgb(14, 15, 15);}    
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="hd">
+      <div class="hd_wrap">
+        <div class="tnb_wrap">
+            <a href=""><img src="./source/logo.png" alt=""></a>
+            <div class="search_wrap">
+                <form action="search" method="post">
+                    <div class="search_fr">
+                        <input type="text" class="search_btn1" id="keyword" name="keyword">
+                        <input type="submit" class="search_btn" value="">
+                    </div>
+                </form>
+            </div>
+            <nav class="tnb">
+                <ul>
+                    <li><a href=""><img src="./source/eng.png" alt="eng"><span>English</span></a></li>
+                    <li><a href=""><img src="./source/chi.png" alt="chi"><span>Chinese</span></a></li>
+                </ul>
+            </nav>
+        </div>
+          <nav class="gnb">
+            <ul class="sub">
+              <li>
+                <a href="sub1.html">정보공개</a>
+                    <ul class="dp1">
+                      <li><a href="detail1">민원안내</a></li>
+                          <ul>
+                            <li><a href="">민원바보</a></li>
+                          </ul>
+                          <ul>
+                            <li><a href="">민원짱</a></li>
+                          </ul>
+                          <ul>
+                            <li><a href="">민원쿵</a></li>
+                          </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail2">민원신청</a></li>
+                        <ul>
+                            <li><a href="">신청1</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">신청2</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">신청3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail3">나의 민원 검색</a></li>
+                        <ul>
+                            <li><a href="">검색1</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">검색2</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">검색3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detai">청탁금지법 신고 안내</a></li>
+                        <ul>
+                          <li><a href="">안내1</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">안내2</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">안내3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail5">국방신고센터</a></li>
+                        <ul>
+                          <li><a href="">센터1</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">센터2</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">센터3</a></li>
+                        </ul>
+                    </ul>
+              </li>
+              <li>
+                <a href="sub2.html">민원ㆍ국민참여</a>
+                    <ul class="detail">
+                      <li><a href="detail1">민원안내</a></li>
+                          <ul>
+                            <li><a href="">민원바보</a></li>
+                          </ul>
+                          <ul>
+                            <li><a href="">민원짱</a></li>
+                          </ul>
+                          <ul>
+                            <li><a href="">민원쿵</a></li>
+                          </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail2">민원신청</a></li>
+                        <ul>
+                            <li><a href="">신청1</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">신청2</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">신청3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail3">나의 민원 검색</a></li>
+                        <ul>
+                            <li><a href="">검색1</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">검색2</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">검색3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detai">청탁금지법 신고 안내</a></li>
+                        <ul>
+                          <li><a href="">안내1</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">안내2</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">안내3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail5">국방신고센터</a></li>
+                        <ul>
+                          <li><a href="">센터1</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">센터2</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">센터3</a></li>
+                        </ul>
+                    </ul>
+              </li>
+              <li>
+                <a href="sub3.html">정보공개</a>
+                    <ul class="detail">
+                      <li><a href="detail1">민원안내</a></li>
+                          <ul>
+                            <li><a href="">민원바보</a></li>
+                          </ul>
+                          <ul>
+                            <li><a href="">민원짱</a></li>
+                          </ul>
+                          <ul>
+                            <li><a href="">민원쿵</a></li>
+                          </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail2">민원신청</a></li>
+                        <ul>
+                            <li><a href="">신청1</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">신청2</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">신청3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail3">나의 민원 검색</a></li>
+                        <ul>
+                            <li><a href="">검색1</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">검색2</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">검색3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detai">청탁금지법 신고 안내</a></li>
+                        <ul>
+                          <li><a href="">안내1</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">안내2</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">안내3</a></li>
+                        </ul>
+                    </ul>
+                    <ul>
+                      <li><a href="detail5">국방신고센터</a></li>
+                        <ul>
+                          <li><a href="">센터1</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">센터2</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="">센터3</a></li>
+                        </ul>
+                    </ul>
+              </li>
+            </ul>
+            <li>
+            </li>
+          </nav>
+        </div>  
+        <figure class="vs" id="vs">
+          <ul class="img_box owl-carousel">
+              <li>
+                  <a href="">
+                      <img src="/source/moving1.png" alt="메인1" class="vs_img">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="/source/moving2.png" alt="메인2" class="vs_img">
+                  </a>
+              </li>
+              <li>
+                  <a href="">
+                      <img src="/source/moving3.png" alt="메인3" class="vs_img">
+                  </a>
+              </li>
+              
+          </ul>
+          <ul class="btn_box">
+              <li class="btn1"><button>이전</button></li>
+              <li class="btn2"><button>다음</button></li>
+          </ul>
+      </figure>
+      <script>
+          $(function(){
+              $(".owl-carousel").owlCarousel({
+                  autoplay:true,  //자동 실행
+                  loop:true,  //순환 반복
+                  margin:0,   //아이템간 여백
+                  nav:true    //제어바
+              });
+          });  
+      </script>
+      </header>
+      <div class="ico_box">
+        <ul class="ico_wrap">
+            <li class="ico1">
+                <a href="">
+                    <h3 class="ico_tit">아이콘제목1</h3>
+                    <p class="more_txt">MORE &gt;</p>
+                </a>
+            </li>
+            <li class="ico2">
+                <a href="">
+                    <h3 class="ico_tit">아이콘제목2</h3>
+                    <p class="more_txt">MORE &gt;</p>
+                </a>
+            </li>
+            <li class="ico3">
+                <a href="">
+                    <h3 class="ico_tit">아이콘제목3</h3>
+                    <p class="more_txt">MORE &gt;</p>
+                </a>
+            </li>
+            <li class="ico4">
+                <a href="">
+                    <h3 class="ico_tit">아이콘제목4</h3>
+                    <p class="more_txt">MORE &gt;</p>
+                </a>
+            </li>
+            <li class="ico5">
+                <a href="">
+                    <h3 class="ico_tit">아이콘제목5</h3>
+                    <p class="more_txt">MORE &gt;</p>
+                </a>
+            </li>
+            <li class="ico6">
+                <a href="">
+                    <h3 class="ico_tit">아이콘제목6</h3>
+                    <p class="more_txt">MORE &gt;</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="over_sl_box">
+        <ul>
+            <li><a href=""><img src="./data/ban1.jpg" alt="배너이미지1"></a></li>
+            <li><a href=""><img src="./data/ban2.jpg" alt="배너이미지2"></a></li>
+            <li><a href=""><img src="./data/ban3.jpg" alt="배너이미지3"></a></li>
+            <li><a href=""><img src="./data/ban4.png" alt="배너이미지4"></a></li>
+            <li><a href=""><img src="./data/ban5.jpg" alt="배너이미지5"></a></li>
+            <li><a href=""><img src="./data/ban6.jpg" alt="배너이미지6"></a></li>
+            <li><a href=""><img src="./data/ban7.jpg" alt="배너이미지7"></a></li>
+            <li><a href=""><img src="./data/ban8.jpg" alt="배너이미지8"></a></li>
+            <li><a href=""><img src="./data/ban9.jpg" alt="배너이미지9"></a></li>
+            <li><a href=""><img src="./data/ban10.jpg" alt="배너이미지10"></a></li>
+        </ul>
+    </div>
+    <div class="contact_box">
+        <div class="contact_wrap" style="">
+            <div class="noti_box">
+                <input type="radio" name="ra1" class="ra_item" id="ra1" checked>
+                <input type="radio" name="ra1" class="ra_item" id="ra2">
+                <ul class="noti_lb_box">
+                    <li class="item1"><label for="ra1">공지사항</label></li>
+                    <li class="item2"><label for="ra2">채용정보</label></li>
+                    <li class="more_item"><a href="">더보기</a></li>
+                </ul>
+                <ul class="noti_wrap">
+                    <li class="item1 noti">
+                        <div class="noti_con">
+                            공지사항 테이블 요소
+                        </div>
+                    </li>
+                    <li class="item2 noti">
+                        <div class="noti_con">
+                            채용정보 테이블 요소
+                        </div>
+                    </li>
+                </ul>   
+            </div>
+            <div class="news_box">
+                <input type="radio" name="ra2" class="ra_item" id="ra3" checked>
+                <input type="radio" name="ra2" class="ra_item" id="ra4">
+                <ul class="news_lb_box">
+                    <li class="item1"><label for="ra3">보도자료</label></li>
+                    <li class="item2"><label for="ra4">입찰구매</label></li>
+                    <li class="more_item"><a href="">더보기</a></li>
+                </ul>
+                <ul class="news_wrap">
+                    <li class="item1 news">
+                        <div class="news_con">
+                            보도자료 테이블 요소
+                        </div>
+                    </li>
+                    <li class="item2 news">
+                        <div class="news_con">
+                            입찰구매 테이블 요소
+                        </div>
+                    </li>
+                </ul>   
+            </div>
+            <div class="tel_box">
+
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+   
+  <div class="ft">
+         <div class="footerSecInner">
+           <div class="ft_logo"><img src="/source/f-logo.png" alt="하단로고"></div>
+           <div class="nav_add">
+           <nav class="footer_nav">
+           <ul>
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">찾아오시는 길</a></li>
+            <li><a href="">담당자 연락처</a></li>
+            <li><a href="">사업자등록증·계좌안내</a></li>
+            <li><a href="">전자세금계산 확인</a></li>
+            <li><a href="">대금지급조회서비스</a></li>
+            </ul>
+            </nav>
+         <address><span>[04383]</span>서울특별시 용산구 이태원로 22 <span>전화상담 1577-9090 (유료) 팩스 02) 748-6895</span></address>
+          <p class="p_2">Copyright(c) KOREAN ARMY<span>All Rights Reserved.</span></p>
+         <!--카피라이트-->
+         </div> 
+         <div class="logos">
+         <ul>
+          <li><img src="/source/f-mark.png" alt="로고2" /><span>인적자원개발우수기관</span></li>
+          <li><img src="/source/web-mark.png" alt="로고3"></li>
+        </ul>
+        </div>
+      </div>
+     </div>
+   </footer>
+  </div>
+</body>
+</html>

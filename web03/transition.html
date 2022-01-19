@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션</title>
+    <style>
+        .study_group {clear: both; width: 1280px; margin: 60px auto;}
+        .sample {width: 100%; min-height: 800px; background-color: antiquewhite;
+        position: relative;}
+        .box {width: 100px;height: 100px;border-radius: 50px; line-height: 100px;
+        text-align: center; background-color: blueviolet; color: #fff;}
+        #transition1 .box { position: absolute; top: 0; left: 0; 
+            transition-property: top, left, transform; transition-duration: 0.000001s, 0.5s, 0.0000001s;
+            transition-timing-function: ease-out, ease-in, ease-in-out; }
+        #transition1:hover .box {left: 300px; top: 200px; transform: rotate(1280deg);}
+        #animation1 .box { animation-name:ani1; animation-duration:10s; animation-delay: 0.3s;
+            animation-timing-function:ease-in-out; animation-fill-mode:both;
+            animation-iteration-count:3; animation-direction: normal;}   
+        @keyframes ani1 {
+            from { transform:scale(1) rotate(0deg) translate(0px, 0px); }   /* 0% */
+            25% { transform:scale(2) rotate(720deg) translate(800px, 500px);}
+            50% { transform:scale(0.5) rotate(-720deg) translate(-100px, -100px); }
+            75% { transform:scale(1.5) rotate(360deg) translate(100px, 100px);}
+            to { transform:scale(1) rotate(90deg) translate(500px, 500px); } /* 100% */
+
+        }     
+    </style>
+</head>
+<body>
+    <div class="study_group">
+        <h2>트랜지션(Transition) : 화면전환 A -> B, hover, checked시 활용</h2>
+        <p>Transition-duration : 실행시간
+            <br><br>
+            transition-duration:0.5s; /* => 500ms; */
+        </p>
+        <br>
+        <p>Transition-delay : 지연시간
+            <br><br>
+            transition-delay:0.2s; /* => 200ms;*/
+        </p>
+        <br>
+        <p>Transition-property : 트랜지션을 적용할 css 속성을 지정
+            <br><br>
+            transition-property:width, height; /* css의 속성을 지정 */ <br>
+            transition-duration:0.5s, 0.9s;
+        </p>
+        <p>Transition-timing-function : 시간함수를 적용하여 가속 또는 감속효과
+            <br><br>
+            transition-timing-function:ease-in | ease-out
+        </p>
+        <div class="sample" id="transition1">
+            <div class="box">데이터</div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="study_group">
+        <h2>애니메이션(Animaition) : 움직이는 그림 - 연속동작</h2>
+    </div>
+    <p>
+        animation-name: 애니메이ㅕㄴ명으로 keyframes규칙에 해당 애니메이션명을
+        기재해야하며, 적용하고자 하는 요소에도 같이 기재가 되어야 함.
+    </p>
+    <p>
+        .box { animation-name:ani1; animation-duration:10s; }<br>
+        <br>@keyframes ani1  <br>
+        from { left:100px; } / *0초 */ <br>
+        30%  { left:1500px; } /* 3초기점 */<br>
+        60% { left:200px; } /* 6초 기점 */
+        to { left:800px; } /* 10초 기점 */<br>
+    }<br>
+    </p>
+    <br><br>
+    <p>animation-dealy: 애니메이션 지연시간 지정</p>
+    <p>anmation-timing-function : 애니메이션의 가감속 효과 지정</p>
+    <p>animation-iteration-count : 애니메이션의 반복 실행 횟수(무한 : infinite)</p>
+    <p>animation-dirextion : 애니메이션의 진행방향(normal, reverse, alternate, alternate-reverse)
+            <br>normal : 정방향 애니메이션<br>
+            <br>reverse: 역방향 애니메이션<br>
+            <br>alternate : 정-역방향 애니메이션<br>
+            <br>alternate-reverse : 역-정방향 애니메이션<br>
+    </p>
+    <p>animation-file-mode : 기본 애니메이션을 실행한 후 원래대로
+        복귀되는 속성이 있어 종료된 to에서 멈춰있게 하고 싶을 때 사용
+        <br>none, forwards,backwards : 원래대로 돌아감<br>
+        <br>both: 원래대로 돌아가지 않고, 종료된 상태로 정지됨
+    </p>
+    <p>animation-play-state : 애니메이션을 특정 시점에서 정지시키거나 실행을 제어하는 속성
+        <br>paused : 일시정지<br>
+        <br>running : 일시정지 후 계속실행<br>
+        <div class="sample">
+            <div class="box" id="animation">
+                데이터
+            </div>
+        </div>
+    </p>
+</div>
+</body>
+</html>

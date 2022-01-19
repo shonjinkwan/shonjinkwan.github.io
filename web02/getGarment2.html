@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항 글 보기</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="../jquery-latest.js"></script>
+</head>
+<body>
+
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<style>
+	.top { clear:both; float: right; padding-right: 200px; }
+	
+	</style>
+	<meta charset="UTF-8">
+	<title>헤더</title>
+	
+	<div>
+	   <a href="index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+	   <div class="wrap">
+		  <header class="hd">
+			 <nav class="gnb">
+					  <ul>
+						  <li><a href="getGarmentList2.html" class="dp1">아우터</a>
+								<ul>
+									<li><a href="getGarmentList2.html">패딩</a></li>
+									<li><a href="getGarmentList2.html">바람막이</a></li>
+								</ul>
+						  </li>
+						  <li><a href="getGarmentList2.html" class="dp1">상의</a>
+								<ul>
+									<li><a href="getGarmentList2.html">맨투맨</a></li>
+									<li><a href="getGarmentList2.html">후드티</a></li>
+								</ul>
+						  </li> 
+						  <li><a href="getGarmentList2.html" class="dp1">하의</a>
+								<ul>
+									<li><a href="getGarmentList2.html">트레이닝</a></li>
+									<li><a href="getGarmentList2.html">조거</a></li>
+								</ul>
+						  </li>
+						  <li><a href="getGarmentList2.html" class="dp1">신발</a>
+								<ul>
+									<li><a href="getGarmentList2.html">런닝화</a></li>
+									<li><a href="getGarmentList2.html">조던</a></li>
+								</ul>
+						  </li> 
+						  <li><a href="getGarmentList2.html" class="dp1">용품</a>
+								<ul>
+									<li><a href="getGarmentList2.html">케이스</a></li>
+									<li><a href="getGarmentList2.html">모자</a></li>
+								</ul>
+						  </li>  
+					  </ul>
+				  </nav>
+				  <div>
+				<div class="top">
+				<a href="getQna.html">공지사항</a><br>
+				<a href="getBoard.html">문의사항</a><br>
+				<a href="mypage.html">마이페이지</a><br>
+				<a href="basket.html">장바구니</a><br>
+				<a href="GetFlexList.html">구매내역</a><br>
+				</div>
+	
+			<a href="login.html">로그인</a><br>
+			<a href="join.html">회원가입</a><br>
+	
+	</div>
+		 </header>
+		</div>
+		</div>
+	 
+<form action="" method="post" name="frm">
+	<table class="table">
+			<tr>
+			<th class="item1">상품 종류</th>
+			<td>캡</td>
+			</tr>
+			<tr>
+			<th class="item2">상품코드</th>
+			<td>A1001</td>
+			</tr>
+			<tr>
+			<th class="item3">상품 이름</th>
+			<td><input type="hidden" name="gname" id="gname" value="나이키 스우시캡 %>" />
+			<p>나이키 스우시캡</p>
+			</td>
+			</tr>
+			<tr>
+			<th class="item4">상품 가격</th>
+			<td><input type="hidden" name="gprice" id="gprice" value="5000 %>" />
+			5000</td>
+			</tr>
+			<tr>
+			<th class="item5">상품 수량</th>
+			<td><input type="number" name="gcnt" id="gcnt" max="4%>" min="1" value="1"/></td>
+			</tr>
+			<tr>
+			<th class="item5">상품 사이즈</th>
+			<td>XL</td>		
+			</tr>
+			<tr>
+			<th class="item5">상품 이미지</th>
+			<td><img src="./img/cap1.jpg" alt="" /></td>
+			</tr>
+</table>
+		<div class="btn-group">
+			<a href="javascript:" onclick="payAction()" class="btn btn-primary">상품 주문</a>
+			<a href="getGarmentList2.html" class="btn btn-default">상품 목록</a>
+			<a href="addbasket.html%>" class="btn btn-default">장바구니 담기</a>
+		</div>
+	</form>
+		<script>
+		function payAction(){
+			var gcnt = document.getElementById("gcnt").value;
+			var gprice = document.getElementById("gprice").value;
+			var gname = document.getElementById("gname").value;
+			location.href="./flex/flex.jsp?gcnt="+gcnt+"&gprice="+gprice+"&gname="+gname;
+		}
+
+		</script>
+</body>
+</html>

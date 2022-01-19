@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>강릉 관광</title>
+    <meta name="title" content="강릉관광, 강릉여행 향기로 물들다 | 강릉시 공식 관광정보 웹사이트">
+    <meta name="keyword" content="강릉 관광">
+    <meta name="description" content="맛있는 음식을 찾아서, 마음을 힐링 할 수 있는 곳을 찾아서, 특별한 추억을 만들기 위해​
+    사람들은 새로운 여행지를 찾습니다. 강릉으로 오세요!​">
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="강릉관광의 모든 것, 강릉여행 향기로 물들다" />
+    <meta property="og:description" content="맛있는 음식을 찾아서, 마음을 힐링 할 수 있는 곳을 찾아서, 특별한 추억을 만들기 위해​
+    사람들은 새로운 여행지를 찾습니다. 강릉으로 오세요!​" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <style>
+            #item1{background-image: url("/source/item1.jpg");}
+    #item2{background-image: url("/source/item2.jpg");}
+    #item3{background-image: url("/source/item3.jpg");}
+    #item4{background-image: url("/source/item4.jpg");}
+    #item5{background-image: url("/source/item5.jpg");}
+    #item8{background-image: url("/source/item8.jpg");}
+    #item9{background-image: url("/source/item9.jpg");}
+    #item10{background-image: url("/source/item10.jpg");}
+
+    .vs{clear: both; position: relative; width: 100%; overflow-x: hidden;}
+    .vs .img_box{width: 400%;}
+    .vs .img_box li{ width: 25%; float: left;}
+    .vs .img_box li a{display: block; position: relative;}
+    .vs .img_box .vs_img{display: block; width: 100%; max-width: 100vw;}
+    .vs .img_box .tit_box{ position: absolute; top: 100px; left: 0; z-index: 4; 
+             padding: 400px 750px; color: #fff; text-align: center;}
+    .vs .img_box .vs_tit{ font-family: 'TTTogether'; font-size: 40px; font-weight: 400;
+            text-shadow: 2px 2px 15px #666; }
+    .vs .img_box .vs_com{ font-size: 24px; text-align: right; text-shadow: -2px -2px 2px #666;}
+        
+    .btn_box li button{background-color: transparent; display: block; width: 90px; 
+            height: 512px; background-repeat: no-repeat; background-position: center center; 
+            background-size: 100% 100%; position: absolute; top: 160px; z-index: 5; 
+            text-indent: -10000px; cursor: pointer; display: none;}
+    .btn_box li.btn1 button{left: 50px; background-image: url("./source/arrow2.png");}
+    .btn_box li.btn2 button{right: 50px; background-image: url("./source/arrow.png");}
+
+    #page1 { position: relative; padding-top: 190px;  background: url();}
+    #page1:before { content: ""; display: block; width: 440px; height: 400px;
+    position: absolute; background-color: #c0e6d7; border-radius: 50%; left: 50%;
+    margin-left: -220px; margin-top: -180px; }
+    .ptit_box { width: 440px; height: 440px; background-color: #9fccab; color:#fff;
+    text-align: center; padding-top: 300px; box-sizing: border-box; position: absolute; 
+    left: 50%; margin-left:-220px; border-radius: 50%; margin-top: -240px; }
+    .pg_tit2 { font-family: 'TTTogether'; font-size: 36px; width: 100%; clear: both; }
+    .col_tit { content: ""; display: block; width: 40px; height: 2px; background-color: #fff;
+    clear: both; margin: 0 auto; margin-top: 28px; }
+    .col_com { color: #fff; padding: 20px 60px; }
+    #page1 .col_link { display: block; width: 38px; height: 38px; clear: both; float: none;
+    margin: 10px auto; background-image: url("./img/"); background-repeat: no-repeat;
+    background-position: center center; border-radius: 21px; border: 2px solid #fff; 
+    text-indent: -10000px; transform:rotate(90deg); }
+
+    .half_tit1 { font-size: 24px; padding-left: 100px; padding-top: 120px; color: #fff; }
+    .half_tit2 { font-size: 48px; padding-left: 100px; padding-top: 120px; color:#fff; 
+    font-family: 'TTTogether'; font-weight: 400; text-shadow: 2px 2px 2px #333; }
+    .half_com { color:#fff; padding: 40px 100px; font-size: 18px; 
+        text-shadow: 1px 1px 1px #000, -1px -1px 1px #000; }
+    #page2 .ptit_box { background-color: green; }
+    </style>
+</head>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="https://www.gn.go.kr/tour/index.do" class="logo">
+                <h2 class="logo_tit"></h2>
+                <img src="./img/logo.png" alt="로고">
+                </a>
+            <nav class="tnb">
+                <ul>
+                    <li>
+                        <a href="https://www.gn.go.kr/www/index.do">강릉시청</a>
+                    </li>
+                    <li>
+                        <a href="https://www.gn.go.kr/tour/sitemap_12.do">로그인</a>
+                    </li>      
+                </ul>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="https://www.gn.go.kr/tour/sub01_01_01_01.do">테마여행</a>
+                            <ul class="sub">
+                                <li><a href="https://www.gn.go.kr/tour/sub01_01_01_01.do">추천여행코스</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub01_02_01.do">강릉 Hot Place</a></li>    
+                                <li><a href="https://www.gn.go.kr/tour/sub01_03.do">강릉 길 여행</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub01_04_01.do">해양관광의 도시</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/cyber/index.jsp">가상 관광</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub01_07.do">웰니스관광</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.gn.go.kr/tour/sub02_01.do">관광명소</a>
+                            <ul class="sub">
+                                <li><a href="https://www.gn.go.kr/tour/sub02_01.do">TV속 강릉</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/prog/lod/Sights/S01/sub02_02_01/list.do">자연관광</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/prog/lod/Sights/S02/sub02_03_01/list.do">문화관광</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/prog/lod/Sights/S03/sub02_04_01/list.do">레저|체험</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/prog/lodFesta/Festa/sub02_05/list.do">축제</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.gn.go.kr/tour/cop/bbs/BBSMSTR_000000000171/selectBoardList.do">해수욕장</a>
+                             <ul class="sub">
+                                <li><a href="https://www.gn.go.kr/tour/sub03_02.do">해변20개소</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.gn.go.kr/tour/cop/bbs/BBSMSTR_000000000002/selectBoardList.do">관광안내</a>
+                            <ul class="sub">
+                                <li><a href="https://www.gn.go.kr/tour/cop/bbs/BBSMSTR_000000000002/selectBoardList.do">공지사항</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub04_02_01.do">음식</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/prog/imageStayngManage/sub04_03_01/list.do?section=ISC01">숙박</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/prog/prManage/sub04_04_01/list.do">관광 홍보물 및 신청</a></li>
+                                <li><a href="https://www.kctg.or.kr/index.do">문화관광해설 예약</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub04_06.do">교통정보</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub04_07.do">관광안내소</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.gn.go.kr/tour/sub05_01.do">강릉은 지금</a>
+                            <ul class="sub">
+                                <li><a href="https://www.gn.go.kr/tour/sub05_01.do">생활관광"시나미,명주나들이"</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub05_02.do">모바일스탬프투어</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub05_03.do">외국인관광택시</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/sub05_05.do">강릉서핑</a></li>
+                                <li><a href="https://www.gn.go.kr/tour/cop/bbs/BBSMSTR_000000000181/selectBoardList.do">강릉여행영상</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+<body>
+    <div class="content">
+        <figure class="vs">
+            <ul class="img-box">
+                <li>
+                    <a href="">
+                        <img src="" alt="" class="vs_img">
+                        <div class="tit_box">
+                            <h2 class="vs_tit"></h2>
+                            <p class="vs_com"></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="btn_box">
+                <li class="btn1">
+                    <button></button>
+                </li>
+                
+                <li class="btn2">
+                    <button></button>
+                </li>
+            </ul>
+            <section class="page" id="page1">
+                <div class="ptit_box">
+                    <h4 class="pg_tit1"></h4>
+                    <h2 class="pg_tit2"></h2>
+                </div>
+            </section>
+            <div class="page_wrap">
+                <ul class="grid">
+                    <li class="col6">
+                        <div class="col6">
+                            <h3 class="col_tit"></h3>
+                            <div class="col6"></div>
+                            <h3 class="col_tit"></h3>
+                        </div>
+                    </li>
+                    <li class="col6">
+                        <div class="col12">
+                           <img src="" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <section class="page" id="page2">
+                <div class="ptit_box">
+                    <h4 class="pg_tit1"></h4>
+                    <h4 class="pg_tit2"></h4>
+                </div>
+                <div class="page_wrap">
+                    <ul class="gird">
+                        <li class="col6">
+                            <div class="half_box col_item" id="item6">
+                                <input type="radio" id="ral" class="ra"><input type="radio" id="ral" class="ra"><input type="radio" id="ral" class="ra"><input type="radio" id="ral" class="ra">
+                                <ul class="pic_ban">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class="thumb_ban">
+                                    <li>
+                                        <h3 class="th_tit"></h3>
+                                        <label for="" class="lb2"></label>
+                                        <div class="tbox"><img src="" alt=""></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </figure>
+    </div>
+    <footer class="ft">
+        <nav class="fnb">
+            <ul class="fnb_fr">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+        <div class="ft_wrap">
+            <nav class="linkbar">
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p></p>
+                <p></p>
+            </div>
+            <div class="wa">
+                <img src="" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    outline: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap {
+    width: 100%;
+    clear: both;
+}
+li {
+    list-style: none;
+}

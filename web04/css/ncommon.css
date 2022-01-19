@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+/* header */
+.hd {
+    width: 100%;
+    height: 123px;
+    position: relative;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.hd:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 77px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hd_wrap {
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+}
+
+.tnb_wrap {
+    width: 1200px;
+    margin: 15px auto;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    float: left;
+    background-color: #fff;
+    height: 80px;
+    margin-top: 20px;
+    padding: 25px 0;
+    width: 180px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #f1f1f1;
+    height: 100px;
+}
+
+.logo a {
+    padding: 25px 0;
+}
+
+.logo_tit {
+    font-size: 24px;
+    padding-top: 12px;
+}
+
+.logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 30px auto;
+}
+
+.search_wrap {
+    position: absolute;
+    width: 310px;
+    height: 40px;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -45px;
+}
+.search_fr .search_btn1{
+    color: #888888;
+    border: 1px solid #000;
+    padding: 0 10px;
+    float: left;
+    width: 200px;
+    height: 38px;
+    border-right: 0;
+    margin-right: 0;
+}
+.search_btn{
+    width: 50px;
+    height: 40px;
+    background-image: url("./source/sch-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+.tnb {
+    float: right;
+}
+
+.tnb li {
+    float: left;
+    color: #333;
+    font-size: 14px;
+}
+
+.tnb li a {
+    color: #333;
+    display: block;
+    padding: 14px 20px;
+}
+
+.tnb li a span {
+    padding-top: 2px;
+    padding-left: 10px;
+    display: block;
+    float: right;
+    font-weight: bold;
+}
+
+.gnb {
+    clear: both;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #1d4bb0;
+    z-index: 210;
+    margin-top: 8px;
+}
+
+.gnb:before {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 98;
+    top: 60px;
+}
+
+.gnb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 46%;
+    height: 100%;
+    background-color: #ef4c84;
+}
+
+.gnb:hover::before {
+    display: block;
+}
+
+.gnb .main_sub {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.gnb li {
+    float: left;
+    padding: 10px 20px;
+}
+
+.gnb>ul>li:nth-child(5) {
+    margin-left: 32.5%;
+}
+
+.gnb li a.dp1 {
+    display: block;
+    position: relative;
+    color: #fff;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.gnb li .sub {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    height: 200px;
+    width: 1198px;
+    left: 17%;
+}
+
+.gnb li .sub li {
+    width: 170px;
+    float: left;
+}
+
+.gnb li .sub li a {
+    color: #333;
+    display: block;
+    font-size: 14px;
+}
+
+.gnb li .sub li dt:first-child {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.gnb li .sub li a:hover {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.gnb li:hover .sub {
+    display: block;
+}
+.sub_tit{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.sub_dt {
+    margin-left: 50px;
+}
+
+/* footer */
+.ft {
+    color: #222;
+    font-size: 14px;
+    line-height: 1.25;
+    border-top: 1px solid #cdcdcd;
+}
+
+.ft_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 120px;
+}
+.ft_logo{
+    margin-top: 30px;
+    float: left;
+}
+.ft_menu {
+    position: relative;
+}
+.ft_menu ul li {
+    margin-top: 30px;
+    float: left;
+    margin-left: 50px;
+}
+.ft_menu ul li a {
+    color: #000;
+}
+footer span {
+    display: block;
+    clear: both;
+    margin-left: 200px;
+    position: absolute;
+    top: 65px;
+}
+.ft_logo2{
+    width: 255px;
+    float: right;
+    margin-top: 40px;
+}
+.ft_logo2 ul li{
+    float: left;
+    list-style: none;
+}
+.ft_logo2 ul li:first-child{
+    width: 71px;
+    background-color: #333;
+}
+.ft_logo2 ul li:nth-child(2){
+    padding: 10px;
+}
+/* content */
+.content {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    clear: both;
+    padding-top: 190px;
+    position: relative;
+}
+
+/* clear fix */
+.fix {
+    clear: both;
+}
+
+.fix:after {
+    content: "";
+    width: 100%;
+    display: block;
+    clear: both;
+}

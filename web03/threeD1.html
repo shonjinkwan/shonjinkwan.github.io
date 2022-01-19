@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차원 큐브</title>
+    <style>
+     * { margin: 0; padding: 0;}
+     body, html {width: 100%;}
+     ul {list-style: none;}
+     a { text-decoration: none;}
+     
+     .wrap {clear:both; width:100% ; min-height:100vh ;}
+     .canvas { clear:both; width: 960px; margin: 10px auto; min-height: 100vh;
+    background-color: #eee; perspective:800px ;}
+    .sjk_wrap { width: 200px; height: 200px; margin:20px auto;}
+    .cube { width: 200px; height: 200px; position:relative;  backface-visibility: visible; transform-style:preserve-3d; 
+    animation-name:ani1; animation-duration:3s; } 
+    .cube li { position:absolute; width: 200px; height: 200px; opacity:0.75;}
+    .cube li.item1 {background-color: pink; transform:rotateX(90deg) translateZ(100px);}
+    .cube li.item2 {background-color: silver; transform:rotateX(270deg) translateZ(100px);}
+    .cube li.item3 {background-color: gold; transform:rotateY(90deg) translateZ(100px);}
+    .cube li.item4 {background-color: red; transform:rotateY(180deg) translateZ(100px);}
+    .cube li.item5 {background-color: greenyellow; transform:rotateY(270deg) translateZ(100px);}
+    .cube li.item6 {background-color: skyblue;}
+    .box { width: 200px; height: 200px; line-height: 200; text-align: center;
+    color:black; font-size:40px; }
+    @keyframes ani1 {
+            from { transform:scale(1) rotate(0deg) translate(0px, 0px); }   /* 0% */
+            25% { transform:scale(2) rotate(720deg) translate(100px, 100px);}
+            50% { transform:scale(0.5) rotate(-720deg) translate(-100px, -100px); }
+            75% { transform:scale(1.5) rotate(360deg) translate(100px, 100px);}
+            to { transform:scale(1) rotate(90deg) translate(100px, 100px); } /* 100% */
+
+        }  
+
+    </style>
+</head>
+<body>
+<section class="wrap">
+    <div class="sjk_wrap">
+    <div class="canvas">
+        <ul class="cube">
+            <li class="item1">
+                <div class="box">1</div>
+            </li>
+            <li class="item2">
+                <div class="box">2</div>
+            </li>
+            <li class="item3">
+                <div class="box">3</div>
+            </li>
+            <li class="item4">
+                <div class="box">4</div>
+            </li>
+            <li class="item5">
+                <div class="box">5</div>
+            </li>
+            <li class="item6">
+                <div class="box">6</div>
+            </li>
+        </ul>
+    </div>
+</div>    
+</section>    
+</body>
+</html>

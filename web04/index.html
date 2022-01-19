@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>한국표준협회</title>
+    <!-- 메타포 -->
+    <meta name="title" content="" comment="사이트 제목" />
+    <meta name="keywords" content="" comment="검색어" />
+    <meta name="decription" content="" comment="사이트 설명"/>
+    <!-- 오픈그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <!-- 파비콘 -->
+    <link rel="favicon" href="" comment="URL입력칸왼쪽의파비콘"/>
+    <link rel="shortcut icon" href="" comment="웹브라우저왼쪽상단의 아이콘"/>
+    <link rel="icon" href="" comment="즐겨찾기했을때의 웹사이트의 대표 아이콘" />
+    <!-- 필요한 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- 구글 애널리틱스 연결 : 방문자 통계 및 로그분석 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109283150-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-109283150-1');
+    </script>
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    -->
+    <!-- 사용자 외부 스타일 연결 -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <style>
+    .main_color1 { background-color: #1d4bb0;}
+    .main_color2 { background-color: #ef4c84;}
+    .base_color1 { background-color: #fff; }
+    .base_color2 { background-color: #202020; }
+
+    .contact_wrap { width:1000px; margin:30px auto; height: 600px; }
+    .noti_box { width: 400px; float:left; }
+    .ra_item { display:none; }
+    .noti_wrap { clear:both; }
+    .noti_wrap .noti { display:none; width: 400px; height: 450px; }
+    #ra1:checked ~ .noti_wrap .noti.item1 { display:block; background-color:deeppink;}
+    #ra2:checked ~ .noti_wrap .noti.item2 { display:block; background-color: deepskyblue; }
+    .noti_lb_box { clear:both; height: 48px; }
+    .noti_lb_box li { float:left; width: 100px; text-align: center; height: 48px; line-height: 48px;
+     cursor: pointer; }
+    .noti_lb_box li.more_item { float:right; }
+    .noti_lb_box li label { color:#000; font-weight: normal;}
+    #ra1:checked ~ .noti_lb_box li.item1 label { color:red; font-weight:bold; }
+    #ra2:checked ~ .noti_lb_box li.item2 label { color:red; font-weight:bold; }
+
+    .news_box { width: 400px; float:left; }
+    .news_wrap { clear:both; }
+    .news_wrap .news { display:none; width: 400px; height: 450px; }
+    #ra3:checked ~ .news_wrap .news.item1 { display:block; background-color:deeppink;}
+    #ra4:checked ~ .news_wrap .news.item2 { display:block; background-color: deepskyblue; }
+    .news_lb_box { clear:both; height: 48px; }
+    .news_lb_box li { float:left; width: 100px; text-align: center; height: 48px; line-height: 48px;
+     cursor: pointer; }
+    .news_lb_box li.more_item { float:right; }
+    .news_lb_box li label { color:#000; font-weight: normal;}
+    #ra3:checked ~ .news_lb_box li.item1 label { color:red; font-weight:bold; }
+    #ra4:checked ~ .news_lb_box li.item2 label { color:red; font-weight:bold; }
+
+    .tel_box { width: 200px; height: 500px; float:right; background-color: gold; }
+    .hd_wrap { float:left; clear:both; margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="index.html" class="logo">
+                <img src="./source/logo.png" alt="로고타입">
+            </a>
+            <div class="search_wrap">
+                <form action="" method="">
+                    <div class="search_fr">
+                        <input type="text" id="keyword" name="keyword" placeholder="검색어 입력">
+                        <input type="submit" class="search_btn" value="검색">
+                    </div>
+                </form>
+            </div>
+            <div class="lang_link">
+                <a href="" class="en_ico"><img src="./source/eng.png" alt="영어">English</a>
+                <a href="" class="ch_ico"><img src="./source/chi.png" alt="중국어">Chinese</a>
+            </div>
+        </div>
+        <nav class="gnb">
+            <ul class="l_gnb">
+                <li class="item1">
+                    <a href="" class="dp1">정보공개</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="" class="dp2">정보공개제도</a>
+                            <dl class="dep3">
+                                <dt>정보공개제도</dt>
+                                <dd><a href="" class="dp3">제도1</a></dd>
+                                <dd><a href="" class="dp3">제도2</a></dd>
+                                <dd><a href="" class="dp3">제도3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">업무추진비</a>
+                            <dl class="dep3">
+                                <dt>업무추진비</dt>
+                                <dd><a href="" class="dp3">업무1</a></dd>
+                                <dd><a href="" class="dp3">업무2</a></dd>
+                                <dd><a href="" class="dp3">업무3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">정보목록</a>
+                            <dl class="dep3">
+                                <dt>정보목록</dt>
+                                <dd><a href="" class="dp3">정보1</a></dd>
+                                <dd><a href="" class="dp3">정보2</a></dd>
+                                <dd><a href="" class="dp3">정보3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">사전 정보공표</a>
+                            <dl class="dep3">
+                                <dt>사전 정보공표</dt>
+                                <dd><a href="" class="dp3">공표1</a></dd>
+                                <dd><a href="" class="dp3">공표2</a></dd>
+                                <dd><a href="" class="dp3">공표3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">정책실명제</a>
+                            <dl class="dep3">
+                                <dt>정책실명제</dt>
+                                <dd><a href="" class="dp3">실명1</a></dd>
+                                <dd><a href="" class="dp3">실명2</a></dd>
+                                <dd><a href="" class="dp3">실명3</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item2">
+                    <a href="" class="dp1">민원ㆍ국민참여</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="" class="dp2">민원안내</a>
+                            <dl class="dep3">
+                                <dt>민원안내</dt>
+                                <dd><a href="" class="dp3">민원1</a></dd>
+                                <dd><a href="" class="dp3">민원2</a></dd>
+                                <dd><a href="" class="dp3">민원3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">민원신청</a>
+                            <dl class="dep3">
+                                <dt>민원신청</dt>
+                                <dd><a href="" class="dp3">신청1</a></dd>
+                                <dd><a href="" class="dp3">신청2</a></dd>
+                                <dd><a href="" class="dp3">신청3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">나의 민원 검색</a>
+                            <dl class="dep3">
+                                <dt>나의 민원 검색</dt>
+                                <dd><a href="" class="dp3">검색1</a></dd>
+                                <dd><a href="" class="dp3">검색2</a></dd>
+                                <dd><a href="" class="dp3">검색3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">청탁금지법 신고 안내</a>
+                            <dl class="dep3">
+                                <dt>청탁금지법 신고 안내</dt>
+                                <dd><a href="" class="dp3">안내1</a></dd>
+                                <dd><a href="" class="dp3">안내2</a></dd>
+                                <dd><a href="" class="dp3">안내3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">국방신고센터</a>
+                            <dl class="dep3">
+                                <dt>국방신고센터</dt>
+                                <dd><a href="" class="dp3">센터1</a></dd>
+                                <dd><a href="" class="dp3">센터2</a></dd>
+                                <dd><a href="" class="dp3">센터3</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item3">
+                    <a href="" class="dp1">국방소식</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="" class="dp2">알림</a>
+                            <dl class="dep3">
+                                <dt>알림</dt>
+                                <dd><a href="" class="dp3">알림1</a></dd>
+                                <dd><a href="" class="dp3">알림2</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">국방뉴스</a>
+                            <dl class="dep3">
+                                <dt>국방뉴스</dt>
+                                <dd><a href="" class="dp3">뉴스1</a></dd>
+                                <dd><a href="" class="dp3">뉴스2</a></dd>
+                                <dd><a href="" class="dp3">뉴스3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">보도자료</a>
+                            <dl class="dep3">
+                                <dt>보도자료</dt>
+                                <dd><a href="" class="dp3">자료1</a></dd>
+                                <dd><a href="" class="dp3">자료2</a></dd>
+                                <dd><a href="" class="dp3">자료3</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">언론보도 바로보기</a>
+                            <dl class="dep3">
+                                <dt>언론보도 바로보기</dt>
+                                <dd><a href="" class="dp3">보도1</a></dd>
+                                <dd><a href="" class="dp3">보도2</a></dd>
+                                <dd><a href="" class="dp3">보도3</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item4">
+                    <a href="" class="dp1">국정 과제</a>
+                    <ul class="sub">
+                        <li class="menu_thumb1">
+                            <a href="" class="menu_thumb_link">국정<br>과제</a>
+                        </li>
+                        <li class="menu_thumb2">
+                            <a href="" class="menu_thumb_link">국정<br>과제</a>
+                        </li>
+                        <li class="menu_thumb3">
+                            <a href="" class="menu_thumb_link">국정<br>과제</a>
+                        </li>
+                        <li class="menu_thumb4">
+                            <a href="" class="menu_thumb_link">국정<br>과제</a>
+                        </li>
+                        <li class="menu_thumb5">
+                            <a href="" class="menu_thumb_link">국정<br>과제</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="r_gnb">
+                <li class="item1">
+                    <a href="" class="dp1">국방부소개</a>
+                    <ul class="sub">
+                        <li>
+                            <a href="" class="dp2">국방부소개</a>
+                            <dl class="dep3">
+                                <dt>국방부소개</dt>
+                                <dd><a href="" class="dp3">임무/비전</a></dd>
+                                <dd><a href="" class="dp3">상징물</a></dd>
+                                <dd><a href="" class="dp3">연혁</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">장관</a>
+                            <dl class="dep3">
+                                <dt>장관</dt>
+                                <dd><a href="" class="dp3">인사말</a></dd>
+                                <dd><a href="" class="dp3">장관약력</a></dd>
+                                <dd><a href="" class="dp3">장관일정</a></dd>
+                                <dd><a href="" class="dp3">연설문</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">차관</a>
+                            <dl class="dep3">
+                                <dt>차관</dt>
+                                <dd><a href="" class="dp3">차관약력</a></dd>
+                                <dd><a href="" class="dp3">역대차관</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">조직 및 직원안내</a>
+                            <dl class="dep3">
+                                <dt>조직 및 직원안내</dt>
+                                <dd><a href="" class="dp3">조직도</a></dd>
+                                <dd><a href="" class="dp3">직원/업무안내</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">관련사이트</a>
+                            <dl class="dep3">
+                                <dt>관련사이트</dt>
+                                <dd><a href="" class="dp3">정부기관</a></dd>
+                                <dd><a href="" class="dp3">국방관련</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="" class="dp2">찾아오시는길</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>  
+    </header>
+    <section class="content">
+        <figure class="vs">
+            <ul class="vs_pic_box">
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+                <li><img src="" alt=""></li>
+            </ul>
+            <ul class="btn_box1">
+                <li><button class="vs_btn prev"></button></li>
+                <li><button class="vs_btn next"></button></li>
+            </ul>
+            <ul class="btn_box2">
+                <li><button class="btn1"></button></li>
+                <li><button class="btn2"></button></li>
+                <li><button class="btn3"></button></li>
+                <li><button class="btn4"></button></li>
+                <li><button class="play_btn"></button></li>
+            </ul>
+        </figure>
+        <div class="ico_box">
+            <ul class="ico_wrap">
+                <li class="ico1">
+                    <a href="">
+                        <h3 class="ico_tit">아이콘제목1</h3>
+                        <p class="more_txt">MORE &gt;</p>
+                    </a>
+                </li>
+                <li class="ico2">
+                    <a href="">
+                        <h3 class="ico_tit">아이콘제목2</h3>
+                        <p class="more_txt">MORE &gt;</p>
+                    </a>
+                </li>
+                <li class="ico3">
+                    <a href="">
+                        <h3 class="ico_tit">아이콘제목3</h3>
+                        <p class="more_txt">MORE &gt;</p>
+                    </a>
+                </li>
+                <li class="ico4">
+                    <a href="">
+                        <h3 class="ico_tit">아이콘제목4</h3>
+                        <p class="more_txt">MORE &gt;</p>
+                    </a>
+                </li>
+                <li class="ico5">
+                    <a href="">
+                        <h3 class="ico_tit">아이콘제목5</h3>
+                        <p class="more_txt">MORE &gt;</p>
+                    </a>
+                </li>
+                <li class="ico6">
+                    <a href="">
+                        <h3 class="ico_tit">아이콘제목6</h3>
+                        <p class="more_txt">MORE &gt;</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="over_sl_box">
+            <ul>
+                <li><a href=""><img src="./data/ban1.jpg" alt="배너이미지1"></a></li>
+                <li><a href=""><img src="./data/ban2.jpg" alt="배너이미지2"></a></li>
+                <li><a href=""><img src="./data/ban3.jpg" alt="배너이미지3"></a></li>
+                <li><a href=""><img src="./data/ban4.png" alt="배너이미지4"></a></li>
+                <li><a href=""><img src="./data/ban5.jpg" alt="배너이미지5"></a></li>
+                <li><a href=""><img src="./data/ban6.jpg" alt="배너이미지6"></a></li>
+                <li><a href=""><img src="./data/ban7.jpg" alt="배너이미지7"></a></li>
+                <li><a href=""><img src="./data/ban8.jpg" alt="배너이미지8"></a></li>
+                <li><a href=""><img src="./data/ban9.jpg" alt="배너이미지9"></a></li>
+                <li><a href=""><img src="./data/ban10.jpg" alt="배너이미지10"></a></li>
+            </ul>
+        </div>
+        <div class="contact_box">
+            <div class="contact_wrap" style="">
+                <div class="noti_box">
+                    <input type="radio" name="ra1" class="ra_item" id="ra1" checked>
+                    <input type="radio" name="ra1" class="ra_item" id="ra2">
+                    <ul class="noti_lb_box">
+                        <li class="item1"><label for="ra1">공지사항</label></li>
+                        <li class="item2"><label for="ra2">채용정보</label></li>
+                        <li class="more_item"><a href="">더보기</a></li>
+                    </ul>
+                    <ul class="noti_wrap">
+                        <li class="item1 noti">
+                            <div class="noti_con">
+                                공지사항 테이블 요소
+                            </div>
+                        </li>
+                        <li class="item2 noti">
+                            <div class="noti_con">
+                                채용정보 테이블 요소
+                            </div>
+                        </li>
+                    </ul>   
+                </div>
+                <div class="news_box">
+                    <input type="radio" name="ra2" class="ra_item" id="ra3" checked>
+                    <input type="radio" name="ra2" class="ra_item" id="ra4">
+                    <ul class="news_lb_box">
+                        <li class="item1"><label for="ra3">보도자료</label></li>
+                        <li class="item2"><label for="ra4">입찰구매</label></li>
+                        <li class="more_item"><a href="">더보기</a></li>
+                    </ul>
+                    <ul class="news_wrap">
+                        <li class="item1 news">
+                            <div class="news_con">
+                                보도자료 테이블 요소
+                            </div>
+                        </li>
+                        <li class="item2 news">
+                            <div class="news_con">
+                                입찰구매 테이블 요소
+                            </div>
+                        </li>
+                    </ul>   
+                </div>
+                <div class="tel_box">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_box">
+                <nav class="sns_link">
+                    <ul>
+                        <li class="item1"><a href=""></a></li>
+                        <li class="item2"><a href=""></a></li>
+                        <li class="item3"><a href=""></a></li>
+                        <li class="item4"><a href=""></a></li>
+                        <li class="item5"><a href=""></a></li>
+                    </ul>
+                </nav>
+                <nav class="relation_link">
+                    <a href="" class="hot_link">지역 본부 홈페이지</a>
+                    <div class="rel_sel_box">
+                        <select name="" id="">
+                            <option value="site1">링크1</option>
+                            <option value="site2">링크2</option>
+                            <option value="site3">링크3</option>
+                            <option value="site4">링크4</option>
+                            <option value="site5">링크5</option>
+                        </select>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="ft_wrap">
+            <div class="ft_box">
+                <nav class="ft_link">
+                    <ul>
+                        <li><a href="">하단링크1</a></li>
+                        <li><a href="">하단링크2</a></li>
+                        <li><a href="">하단링크3</a></li>
+                        <li><a href="">하단링크4</a></li>
+                        <li><a href="">하단링크5</a></li>
+                        <li><a href="">하단링크6</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">여기는 카피라이트</p>
+                <ul class="wa_group">
+                    <li class="item1"></li>
+                    <li class="item2"></li>
+                </ul>    
+            </div>
+        </div>
+    </footer>
+</div>    
+</body>
+</html>

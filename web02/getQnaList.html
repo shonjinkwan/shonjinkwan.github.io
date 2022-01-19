@@ -1,0 +1,109 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="/jquery-latest.js"></script>
+<link rel="stylesheet" href="/datatables.min.css" />
+<script src="/datatables.min.js"></script>
+</head>
+<body>
+
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/main.css">
+	
+	<meta charset="UTF-8">
+	<title>헤더</title>
+	
+	
+	<div>
+	   <a href="admin_index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+	   <div class="wrap">
+		  <header class="hd">
+			 <nav class="gnb">
+					  <ul>
+							<li><a href="admin.html" class="dp1">관리자 페이지</a></li>
+						  <li><a href="getGarmentList.html" class="dp1">제품관리</a></li>
+						  <li><a href="GetCustomList.html" class="dp1">회원관리</a></li>  
+						  <li><a href="GetQnaList.html" class="dp1">게시판관리</a></li> 
+						  <li><a href="admin_index.html" class="dp1">메인페이지</a></li>  
+					  </ul>
+				  </nav>
+				  <div>
+	
+				<span>관리자님 환영합니다</span>
+				
+		
+			<a href="login.html">로그인</a><br>
+			<a href="join.html">회원가입</a><br>
+			<a href="getGarmentList.html">전체상품</a>
+		
+	</div>
+		 </header>
+		</div>
+		</div>
+	 
+  <div class="container">
+      <h2 class="tit">공지사항 목록</h2>
+      <form action="" method="post" id="qna">
+            <table class="table" id="qna">
+               <tr>
+                  <td>
+                        <select name="searchType" id="">
+                           <option value="intit">제목</option>
+                           <option value="incon">내용</option>
+                        </select>
+                        <input type="text" name="searchKeyword" />
+                        <input type="submit" value="검색"/>
+                  </td>
+               </tr>
+            </table>
+      </form>
+	<table class="table">
+		<tr>
+			<th class="item1">번호</th>
+			<th class="item2">작성자</th>
+			<th class="item3">제목</th>
+			<th class="item4">작성일</th>
+			<th class="item5">읽은횟수</th>
+		</tr>
+
+	
+	<tr>
+		<td class="item1">1</td>
+		<td class="item2">징간</td>
+		<td class="item3"><a href="getQna.html"></a></td>
+		<td class="item4">2014</td>
+		<td class="item5">5</td>
+	</tr>
+	
+	</table>
+
+	<nav>
+		<ul class="pagenation">
+			<li><a href=""><span arial-hidden="true">&laquo;</span></a></li>
+			<li><a href=""></a>1</li>
+			<li><a href=""><span arial-hidden="true">&raquo;</span></a></li>
+		</ul>		
+	</nav>
+	<div class="btn-group">
+	<a href="./qna/addQna.html" class="btn btn-default">글작성</a>
+	</div>
+</div>
+   <script>
+   $(function(){
+      $("#qna").DataTable();
+   });
+   </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+<style>
+.tit {text-align: center;}
+.frm fieldset {width: 200px; padding: 50px; margin: 20px auto;  }
+.in_data { display:block; width:600px; height:48px; line-height: 48px; text-indent: 16px; margin:10px auto;}
+.fr_wrap {text-align: center; margin: 70px;}
+.in_btn { display: block; width: 150px; height: 48px; line-height: 48px; text-align: center;
+background-color: #333; color:#fff; border:0; out-line:0; padding-bottom:10px; cursor: pointer; border-radius:10px;}
+.fr_wrap span:first-child { float:left; }
+.fr_wrap span:last-child { float:right; }
+</style>
+</head>
+<body>
+
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<style>
+	.top { clear:both; float: right; padding-right: 200px; }
+	
+	</style>
+	<meta charset="UTF-8">
+	<title>헤더</title>
+	
+	<div>
+	   <a href="index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+	   <div class="wrap">
+		  <header class="hd">
+			 <nav class="gnb">
+					  <ul>
+						  <li><a href="getGarmentList2.html" class="dp1">아우터</a>
+								<ul>
+									<li><a href="getGarmentList2.html">패딩</a></li>
+									<li><a href="getGarmentList2.html">바람막이</a></li>
+								</ul>
+						  </li>
+						  <li><a href="getGarmentList2.html" class="dp1">상의</a>
+								<ul>
+									<li><a href="getGarmentList2.html">맨투맨</a></li>
+									<li><a href="getGarmentList2.html">후드티</a></li>
+								</ul>
+						  </li> 
+						  <li><a href="getGarmentList2.html" class="dp1">하의</a>
+								<ul>
+									<li><a href="getGarmentList2.html">트레이닝</a></li>
+									<li><a href="getGarmentList2.html">조거</a></li>
+								</ul>
+						  </li>
+						  <li><a href="getGarmentList2.html" class="dp1">신발</a>
+								<ul>
+									<li><a href="getGarmentList2.html">런닝화</a></li>
+									<li><a href="getGarmentList2.html">조던</a></li>
+								</ul>
+						  </li> 
+						  <li><a href="getGarmentList2.html" class="dp1">용품</a>
+								<ul>
+									<li><a href="getGarmentList2.html">케이스</a></li>
+									<li><a href="getGarmentList2.html">모자</a></li>
+								</ul>
+						  </li>  
+					  </ul>
+				  </nav>
+				  <div>
+				<div class="top">
+				<a href="getQna.html">공지사항</a><br>
+				<a href="getBoard.html">문의사항</a><br>
+				<a href="mypage.html">마이페이지</a><br>
+				<a href="basket.html">장바구니</a><br>
+				<a href="GetFlexList.html">구매내역</a><br>
+				</div>
+	
+			<a href="login.html">로그인</a><br>
+			<a href="join.html">회원가입</a><br>
+	
+	</div>
+		 </header>
+		</div>
+		</div>
+	 
+	<div class="content">
+	<h2 class="tit">로그인</h2>
+	<form action="" method="post" class="frm" id="frm">
+	<fieldset>
+	<table>
+		<tbody>
+			<tr>
+					<th><label for="cid"></label></th>
+					<td><input type="text" name="cid" id="cid" placeholder="아이디를 입력하세요" class="in_data" required/></td>				
+			</tr>
+			<br>
+			<br>
+			<tr>
+					<th><label for="cpw"></label></th>
+					<td><input type="password" name="cpw" id="cpw" placeholder="비밀번호를 입력하세요" class="in_data" required /></td>				
+			</tr>
+		</tbody>
+	</table>
+		<ul class="fr_wrap">
+			<span class="col_btn">
+			<input type="submit" value="로그인" class="in_btn"/>
+			</span>
+			<span class="col_btn">
+			<input type="reset" value="취소" class="in_btn"/>
+			</span>
+		</ul>
+	</fieldset>
+</form>
+</div>
+</body>
+</html>
